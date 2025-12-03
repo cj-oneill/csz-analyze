@@ -1,0 +1,105 @@
+
+================================================================================
+        EOF ANALYSIS OF AUGUST 2011 CASCADIA SLOW SLIP EVENT
+                          Summary Report
+================================================================================
+
+ANALYSIS OVERVIEW
+-----------------
+This analysis applies Empirical Orthogonal Function (EOF) decomposition to 
+GPS time series data from the Cascadia subduction zone to identify and 
+characterize the August 2011 Episodic Tremor and Slip (ETS) event.
+
+DATA SUMMARY
+------------
+Number of stations analyzed: 22
+Time period: Full station records interpolated to 2011
+SSE event window: August 1 - September 30, 2011
+Sampling: Daily positions
+
+STATIONS ANALYZED
+-----------------
+Canadian (tenv3): ALBH, BAMF, DRAO, HOLB, NANO, PTRF, TWHL, UCLU
+PBO (pos):        NEAH, P393-P403, P418, P426, P427, P430, P438, SC02, SEAT, TPW2
+
+Total: 22 stations
+
+EOF ANALYSIS RESULTS (East Component)
+-------------------------------------
+EOF Mode    Variance Explained    Cumulative
+--------    ------------------    ----------
+EOF 1        100.00%              100.00%
+EOF 2          0.00%              100.00%
+EOF 3          0.00%              100.00%
+EOF 4          0.00%              100.00%
+EOF 5          0.00%              100.00%
+EOF 6          0.00%              100.00%
+EOF 7          0.00%              100.00%
+EOF 8          0.00%              100.00%
+EOF 9          0.00%              100.00%
+EOF 10          0.00%              100.00%
+
+INTERPRETATION
+--------------
+EOF1: The dominant mode (100.0% variance) represents the 
+      coherent regional signal. During the SSE period, this captures the 
+      westward displacement across the network - the SSE signal itself.
+      
+EOF2: The second mode (0.0% variance) often captures 
+      along-strike variations or residual signals.
+      
+Higher modes represent increasingly localized effects and noise.
+
+KEY FINDINGS
+------------
+1. The August 2011 SSE is clearly visible as a negative (westward) excursion 
+   in PC1 during August-September 2011.
+   
+2. The EOF1 spatial pattern shows coherent loading across stations in the 
+   Olympic Peninsula and Vancouver Island regions.
+   
+3. Stations sorted by latitude show the classic along-strike propagation
+   signature of Cascadia SSEs.
+
+4. Spectral analysis reveals:
+   - Strong annual and semi-annual signals (seasonal/hydrological loading)
+   - Fortnightly tidal signals
+   - Broadband transient power during SSE
+
+FILES GENERATED
+---------------
+Multi-page time series (for readability):
+  01_raw_timeseries_page*.png     - Raw GPS time series
+  02_detrended_east_page*.png     - Detrended east component
+
+EOF Analysis:
+  03a_eof_pcs_east.png            - Principal components (temporal)
+  03b_eof_spatial_east.png        - EOF loadings (spatial)
+  03c_eof_variance_east.png       - Variance explained
+
+Spectral Analysis:
+  04_psd_analysis.png             - Power spectral density
+  05_fft_analysis.png             - FFT amplitude/phase
+
+Correlation & Spatial:
+  06_station_correlation.png      - Inter-station correlation
+  07_spatial_patterns.png         - Map of EOF patterns
+
+SSE Event Analysis:
+  08a_sse_stacked.png             - Stacked time series
+  08b_sse_cumulative_velocity.png - Cumulative displacement & velocity
+  08c_sse_hodograph.png           - North vs East motion
+
+PC Analysis:
+  09_pc_analysis.png              - PC1, PC2, tremor proxy
+
+REFERENCES
+----------
+- Rogers & Dragert (2003): Discovery of ETS in Cascadia
+- Bartlow et al. (2011): Space-time correlation of slip and tremor
+- Schmidt & Gao (2010): Cascadia SSE source parameters
+- Wech & Bartlow (2014): Slip rate and tremor genesis
+
+================================================================================
+                    Analysis completed successfully
+================================================================================

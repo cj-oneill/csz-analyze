@@ -7,24 +7,16 @@ from scipy.stats import linregress
 
 # Helper function to compute and plot the PSD
 def plot_psd(ax, data, title, color):
-    """
-    Computes and plots the Power Spectral Density (PSD).
-    The X-axis is set to Frequency (cycles/year) and zoomed to focus on
-    the month-to-10-year timescale.
-    """
-    # 1. Remove the mean and a linear trend (detrend)
+
     try:
         data = data.values # Ensure it's a NumPy array
     except:
         pass # Already a NumPy array
 
-    # 2. Detrend the data
     days = np.arange(len(data))
     p = np.polyfit(days, data, 1)
     detrended_data = data - np.polyval(p, days)
-    
-    # 3. Compute PSD on a temporary axis to get Pxx and freqs without plotting
-    # Fs=1.0 means frequencies are in cycles/day
+
     fig_temp = plt.figure()
     ax_temp = fig_temp.add_subplot(111)
     Pxx, freqs = ax_temp.psd(detrended_data, NFFT=len(detrended_data), Fs=1.0, 
